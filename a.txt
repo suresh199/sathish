@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    
+    
+    
+    stages {
+        stage('github clone') {
+            steps {
+                
+                 
+                git branch: 'master', url: 'https://github.com/suresh199/sathish.git'
+                
+            }
+            
+        }
+        
+        stage('linux commands') {
+            steps {
+            sh '''
+            
+            ls -la
+            
+            '''
+            }
+        }
+}
+}
